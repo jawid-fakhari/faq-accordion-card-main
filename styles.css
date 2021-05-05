@@ -1,0 +1,162 @@
+/* creare menu cliccabile
+cambiare il colore dei p
+creare menu a tenda
+spazio tra le linee di p
+mettere icona della menu */
+html {
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient(#af67e9, #6565e7);
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+}
+
+p{
+  float: left;
+  width: 100%;
+  cursor: pointer;
+}
+img {
+  position: relative;
+}
+hr{
+  border: 1px solid hsl(240, 5%, 91%);
+}
+/* table{
+  margin: -3px;
+} */
+/* td{
+  padding-right: 3rem;
+} */
+
+/***** white board area for descktop *******/
+.white-board {
+  background-color: white;
+  border-radius: 25px;
+  width: 45rem;
+  height: 25rem;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: auto;
+}
+.float-left{
+  float: left;
+}
+/* media query mobile 375px */
+@media screen and (max-width: 375px) {
+  .white-board {
+    background-color: white;
+    border-radius: 25px;
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    top: 100px; right: 0; bottom: 0; left: 0;
+    margin: auto;
+  }
+  .float-left {
+    float: none;
+  }
+  .images-area{display: none;}
+  .mobile-images {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+  }
+  .fore-mobile {
+    gird-column: 1;
+    grid-row: 1;
+    top: -110px;
+  }
+  .back-mobile {
+    left: -240px;
+  }
+  .text-area-descktop {display: contents;}
+  .text-area-mobile {
+    position: relative;
+    top: -70px; left: 17px;
+    text-align: left;
+    width: 17rem;
+  }
+  .h1-mobile {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 375px) {
+  .mobile-images {display: none;}
+}
+/****** images area, left side  ******/
+.descktop-images {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  overflow: hidden;
+  position: relative;
+  width: 22rem;
+  height: 25rem;
+}
+.fore-desktop {
+  grid-column: 1;
+  grid-row: 1;
+  padding-top: 3rem;
+  z-index: 1;
+  width: 22rem;
+  left: -4rem;
+}
+
+.back-desktop {
+  height: 36rem;
+  left: -37rem;
+  top: -10rem;
+}
+
+.mailbox-image {
+  width: 0;
+  height: 0;
+}
+
+.top-desktop {
+  z-index: 2;
+  top: 8rem;
+  right: 8rem;
+}
+/****** text area, menu drop down *******/
+.text-area-descktop {
+  position: relative;
+  left: 40px; top: 45px;
+  width: 17rem;
+  height: 20rem;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  min-width: 100%;
+  overflow: auto;
+  position: static;
+  line-height: 1.5;
+}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {
+  color: red;
+  font-weight: bold;
+}
+/* icona dei dropdown menu */
+.float-right {
+  float: right;
+  position: relative;
+  top: 3px;
+}
+.float-mobile {
+  float: right;
+  position: relative;
+  top: 3px; right: 15px;
+}
+.attribution {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  font-size: 10px;
+  opacity: 80%;
+}
